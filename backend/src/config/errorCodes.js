@@ -3,10 +3,6 @@ import c from './consts';
 
 class ec {}
 
-// TODO: make all ids unique and in ranges.
-// TODO: perhaps add a category? I think cod      expect(res).e is category.
-// TODO: I want these codes logged, so I can review which ones are called most often.
-
 ec.INTERNAL_ERROR = {
   id: 500,
   status: 500,

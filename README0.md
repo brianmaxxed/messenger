@@ -2,17 +2,39 @@
 
 Build a thumbs-up/thumbs-down image moderation service.
 
-## Background
-
-We are working on a project that makes use of user-generated images from around the web. Before an image can be used, it needs to be approved by a human to ensure it isn't inappropriate.
-
-Our task is to build a simple web interface that allows a team of moderators to efficiently review the images.
-
 ## Requirements
-
-The main requirement is that we can process these images as fast as possible. We want to minimize the turnaround time between a user submitting their image and one of our moderators making a decision. We also want to minimize "wasted moderations" i.e. an image should generally only be reviewed once. Images should be reviewed on a first-come first-served basis, more or less.
+ - fast as possible
+ - minimize time making decision
+ - minimize wasted moderations
+ - allow
 
 ### Pages
+
+make dashboard first.
+features:
+show all images based on filter: all, pending, approved, rejected
+figure out how to use redux here.
+I can poll the images url every 10 seconds and if the state changed then it will update the view.
+I can limit this to 20 and don't do lazy loading, no time and may not be needed.
+seems the dashboard can show approved and disapproved in something visual.
+
+* Show the size of the filtered set of images currently being viewed.
+hover over image to show larger image and some stats:
+* Optional: Show some statistics, e.g. the average time spent in queue, number of moderators active, or whatever you think might be useful to the administrator.
+
+
+moderator:
+
+needs ?user=user1 or user2
+need a data model
+current image displayed is next image in the queue.
+watch for race condition but don't show same image to same user.
+
+GET images/{filter}   all, pending, rejected, approved
+** maybe add user=user1 to querystring.
+GET image/{id} to show the individual image in a popup. {id is url, since db has no id field}
+
+GET
 
 We want to start with a prototype that has just two pages. The real system will require moderators to login before they can start work, but for now we can just do something hacky like put `?user=user1` or `?user=user2` in the URL to save time.
 

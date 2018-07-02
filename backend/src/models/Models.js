@@ -1,4 +1,5 @@
 import User from './User';
+import Image from './Image';
 
 export default class Models {
   constructor() {
@@ -8,6 +9,7 @@ export default class Models {
   static get all() {
     return {
       user: new User(),
+      image: new Image(),
     };
   }
 

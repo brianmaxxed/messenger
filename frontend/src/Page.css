@@ -1,0 +1,19 @@
+.Page {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  padding: 0;
+  background-color: #0000cc;
+  display: flex;
+  flex-direction: row;
+  background-color: #0000ff;
+  align-items: flex-end;
+  justify-content: flex-end; }
+  .Page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; }
+  .Page li {
+    list-style: none;
+    padding: 0;
+    margin: 0; }

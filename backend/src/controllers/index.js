@@ -4,18 +4,16 @@ import http from 'http';
 import c from '../config/consts';
 import sc from '../config/statusCodes';
 
-import User from './User';
+// import User from './User';
+import Image from './Image';
 import Models from '../models/Models';
 
 const router = express.Router();
-const base = '/api/v1/en'; // hard code lang for now. make dynamic when needed.
+const base = '/api/v1'; // hard code lang for now. make dynamic when needed.
 const models = Models.all;
 
-router.get(`${base}/ping`, (req, res, next) => {
-  res.status(200).send('pinged');
-});
-
-router.use(`${base}/user`, User.routes(models.user));
+// router.use(`${base}/user`, User.routes(models.user));
+router.use(`${base}/image`, Image.routes(models.image));
 
 // catch 404 and forward to error handler
 router.use((req, res, next) => {
