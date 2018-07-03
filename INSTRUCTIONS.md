@@ -69,7 +69,67 @@ You can now view frontend in the browser.
 
 navigate to the urls above.
 
-### Pages
+
+# API
+The Images API can be found in:
+```
+backend/src/controllers/Images.js
+```
+
+#### Clear the image moderations to default:
+GET http://localhost:3100/api/v1/image/clear
+
+#### List the images
+GET http://localhost:3100/api/v1/image/list/:filter
+filter can be: all, pending, rejected, and approved; leave off the filter for all.
+
+brings back the list of moderated or unmoderated images.
+If an image was moderated then the updatedAt, moderatorId, and approved boolean are added.
+```
+{
+    "status": 200,
+    "data": {
+        "message": [
+            {
+                "_id": "5b39f808092498601a985f80",
+                "ts": 1455123632,
+                "url": "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.01.jpeg",
+                "updatedAt": "2018-07-03T14:28:47.267Z",
+                "moderatorId": 1,
+                "approved": true
+            },
+            {
+                "_id": "5b39f808092498601a985f81",
+                "ts": 1455123633,
+                "url": "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.02.jpeg",
+                "updatedAt": "2018-07-03T14:28:47.939Z",
+                "moderatorId": 1
+            },
+ ```
+#### Next image to moderate
+GET http://localhost:3100/api/v1/image/next?user=user1
+this returns the next single image for a particular user.
+user querystring param is required.
+the db document will be statused with the moderatorId so another user won't get the same image.
+
+#### Moderated images
+user querystring param is required.
+GET http://localhost:3100/api/v1/moderated/next?user=user1
+returns the last 5 moderated images from a particular user
+
+#### Moderate an image
+PUT http://localhost:3100/api/v1/moderate/next?user=user1
+user querystring param is required.
+you must put the following paramters:
+```
+    const params = {
+      imageId: event.target.id ? event.target.id : this.state.newImage._id,
+      user: this.state.user,
+      approved,
+    };
+```
+
+# Pages
 
 There is an api and a frontend.
 
@@ -78,7 +138,7 @@ This url will reset all images to unmoderated and give you the counts returned f
 http://localhost:3100/api/v1/image/clear
 
 There are two pages:
-# Dashboard
+### Dashboard
 ```
 http://localhost:3000/dashboard
 ```
@@ -89,7 +149,7 @@ to denote rejected or approved.
 
 Also, the page does not refresh automatically. This was not in the specs I believe, but a refresh timer could easily be added to display an updated screen as the images are moderated. That would be a nice to have.
 
-# Moderation
+### Moderation
 ```
 http://localhost:3000/moderator?user=user1
 http://localhost:3000/moderator?user=user2
@@ -109,7 +169,7 @@ Users can change their mind on the last 5 entries and reverse their moderation.
 
 We want to start with a prototype that has just two pages. The real system will require moderators to login before they can start work, but for now we can just do something hacky like put `?user=user1` or `?user=user2` in the URL to save time.
 
-## Test Dataset
+### Test Dataset
 
 I created a mongodb database for this example. there are two documents: user and image.
 If there are no users in the user document, then this will not work.
