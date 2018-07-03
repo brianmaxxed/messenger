@@ -187,6 +187,278 @@ user collection:
 }
 ```
 
+image collection:
+```
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f80"), 
+    "ts" : 1455123632, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.01.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f81"), 
+    "ts" : 1455123633, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.02.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f82"), 
+    "ts" : 1455123634, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.03.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f83"), 
+    "ts" : 1455123635, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.04.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f84"), 
+    "ts" : 1455123636, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.05.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f85"), 
+    "ts" : 1455123637, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.06.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f86"), 
+    "ts" : 1455123638, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.07.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f87"), 
+    "ts" : 1455123639, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.1.08.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f88"), 
+    "ts" : 1455123640, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.01.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f89"), 
+    "ts" : 1455123641, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.02.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8a"), 
+    "ts" : 1455123642, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.03.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8b"), 
+    "ts" : 1455123643, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.04.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8c"), 
+    "ts" : 1455123644, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.05.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8d"), 
+    "ts" : 1455123645, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.06.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8e"), 
+    "ts" : 1455123646, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/4.2.07.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f8f"), 
+    "ts" : 1455123647, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.09.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f90"), 
+    "ts" : 1455123648, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.10.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f91"), 
+    "ts" : 1455123649, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.11.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f92"), 
+    "ts" : 1455123650, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.12.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f93"), 
+    "ts" : 1455123651, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.13.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f94"), 
+    "ts" : 1455123652, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.1.14.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f95"), 
+    "ts" : 1455123653, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.2.08.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f96"), 
+    "ts" : 1455123654, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.2.09.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f97"), 
+    "ts" : 1455123655, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.2.10.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f98"), 
+    "ts" : 1455123656, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.3.01.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f99"), 
+    "ts" : 1455123657, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/5.3.02.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9a"), 
+    "ts" : 1455123658, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.01.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9b"), 
+    "ts" : 1455123659, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.02.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9c"), 
+    "ts" : 1455123660, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.03.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9d"), 
+    "ts" : 1455123661, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.04.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9e"), 
+    "ts" : 1455123662, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.05.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985f9f"), 
+    "ts" : 1455123663, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.06.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa0"), 
+    "ts" : 1455123664, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.07.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa1"), 
+    "ts" : 1455123665, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.08.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa2"), 
+    "ts" : 1455123666, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.09.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa3"), 
+    "ts" : 1455123667, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.1.10.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa4"), 
+    "ts" : 1455123668, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/7.2.01.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa5"), 
+    "ts" : 1455123669, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/boat.512.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa6"), 
+    "ts" : 1455123670, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/elaine.512.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa7"), 
+    "ts" : 1455123671, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/gray21.512.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa8"), 
+    "ts" : 1455123672, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/house.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fa9"), 
+    "ts" : 1455123673, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/numbers.512.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985faa"), 
+    "ts" : 1455123674, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/ruler.512.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+{ 
+    "_id" : ObjectId("5b39f808092498601a985fab"), 
+    "ts" : 1455123675, 
+    "url" : "https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images/testpat.1k.jpeg", 
+    "updatedAt" : ISODate("2018-07-03T14:29:11.620+0000")
+}
+```
+
+Note: you can directly import the above data into your own two mongodb collections.
+I took the default CSV file and added an objectID, to avoide race conditions on the image timestamp.
+The timestamp field is denoted as 'ts'.
+
 I created a mongodb database for this example.
 Find the URL in the .env file!
 
