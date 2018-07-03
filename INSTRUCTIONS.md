@@ -1,88 +1,105 @@
 # Instructions for Use
 
-Build a thumbs-up/thumbs-down image moderation service.
+The following are the instructions for running and using the messenger frontend and backend.
 
-## Requirements
- - fast as possible
- - minimize time making decision
- - minimize wasted moderations
- - allow
+## Getting started
+
+### Technology used
+
+1. ReactJS for the frontend (latest version; 16.4);
+2. NodeJS and MongoDB for the backend;
+
+### Prerequisites
+
+1. Git
+2. Node: install version 6.10 or greater (8.10 preferred)
+3. Yarn: See [Yarn website for installation instructions](https://yarnpkg.com/lang/en/docs/install/)
+4 and npm.
+5. A clone of the repo.
+6. a MongoDB database (localhost or something like mongodb atlas(https://www.mongodb.com/cloud/atlas)
+
+### Install backend-end
+ # goto backend folder
+ cd backend
+ 
+ # make sure you're using node v6.10 or greater; install via nvm if neccessary
+ nvm install 6.10
+ # npm install
+ npm install
+ # or use yarn
+ yarn
+ 
+ # edit the .env environment variables if needed. 
+ # default port is 3100; change as needed.
+ # allows you to change to your MONGO_DEV_URI other settings leave as is; experimental
+ # run the app on port 3100 by default.
+ yarn start
+
+console: listening at http://localhost:3100
+
+### Install front-end
+ # go to frontend folder
+ cd frontend
+ 
+ # npm install
+ npm install
+ # or use yarn
+ yarn
+ 
+ # runs on port 3000; uses create-react-app the standard right now for creating the boostrap.
+ yarn start
+
+Compiled successfully!
+
+You can now view frontend in the browser.
+
+  Local:            http://localhost:3000/
+  On Your Network:  http://192.168.1.208:3000/
+
+# navigate to the urls above.
 
 ### Pages
 
-make dashboard first.
-features:
-show all images based on filter: all, pending, approved, rejected
-figure out how to use redux here.
-I can poll the images url every 10 seconds and if the state changed then it will update the view.
-I can limit this to 20 and don't do lazy loading, no time and may not be needed.
-seems the dashboard can show approved and disapproved in something visual.
+There is an api and a frontend.
 
-* Show the size of the filtered set of images currently being viewed.
-hover over image to show larger image and some stats:
-* Optional: Show some statistics, e.g. the average time spent in queue, number of moderators active, or whatever you think might be useful to the administrator.
+#It's a good idea to clear the image moderation before starting if you are using my db or in general.
+#This url will reset all images to unmoderated and give you the counts returned from mongodb:
+http://localhost:3100/api/v1/image/clear
 
+There are two pages:
+# Dashboard
+http://localhost:3000/dashboard
+This page shows all the current images and allows a filter to change all, pending, rejected, approved.
+I didn't have time to spice up the dashboard in the time alloted, but I did add a red or green color
+to denote rejected or approved. More features could be added easily to accomodate a better dashboard.
 
-moderator:
+Also, the page does not refresh automatically. This was not in the specs I believe, but a refresh timer could easily be added to display an updated screen as the images are moderated. That would be a nice to have.
 
-needs ?user=user1 or user2
-need a data model
-current image displayed is next image in the queue.
-watch for race condition but don't show same image to same user.
+# Moderation
+http://localhost:3000/moderator?user=user1
+http://localhost:3000/moderator?user=user2
 
-GET images/{filter}   all, pending, rejected, approved
-** maybe add user=user1 to querystring.
-GET image/{id} to show the individual image in a popup. {id is url, since db has no id field}
+You can have mulliple windows open at the same time and see that users can only moderate their next image
+and there is no overlap between.
+Make sure you add the ?user=user1 or ?user=user2 as these are the only 2 users
+(the edge cases of no users has not been added/asked to this example)
 
-GET
+On the moderation page each user will see a unique next image to moderate.
+Approve or reject the image. The last 5 user's moderations in order from left to right are displayed.
+Users can change their mind on the last 5 entries and reverse their moderation.
+
 
 We want to start with a prototype that has just two pages. The real system will require moderators to login before they can start work, but for now we can just do something hacky like put `?user=user1` or `?user=user2` in the URL to save time.
 
-#### /moderator
-
-This is the page where moderators will approve/reject images. It should appear as follows:
-
-* When the queue is not empty:
-  * Show the image to be reviewed with approve/reject buttons
-
-* When the queue is empty:
-  * Show message saying the queue is empty.
-
-* Always:
-  * Show this moderator's past 5 moderations with buttons to toggle their decision (so they can undo a mistake)
-  * Possible to use keyboard-only for all interactions
-
-Example Layout:
-
-![Example Layout](example_layout_moderator_page.png)
-
-#### /dashboard
-
-This is the page where we can see the state of the system, how well the moderators are performing, etc.
-
-* Show all the images the system knows about.
-* Filter by: all, pending, approved, rejected.
-* Sort by: time the image entered the system.
-* Show the size of the filtered set of images currently being viewed.
-* Optional: Show some statistics, e.g. the average time spent in queue, number of moderators active, or whatever you think might be useful to the administrator.
-
-Example Layout:
-
-![Example Layout](example_layout_dashboard_page.png)
-
 ## Test Dataset
 
-You can use this [CSV of test data](https://d3ous0vnp05zqm.cloudfront.net/manual_uploads/moderation_challenge/images.csv) to build your service. It's a two-column CSV. The first column is the timestamp when the image was added to the system. The second column is the image URL.
+I created a mongodb database for this example. there are two documents: user and image.
+If there are no users in the user document, then this will not work.
+The data files are in the root of the project: image.json and user.json.
+If creating your own mongodb database import these two files before running.
 
-## Deliverables
+The moderation will add a moderatorId (userId) and an approved boolean upon moderation.
+When a user gets a new image, there moderationId is added to that image record.
+Multiple users will not receive the same image to moderate.
+When a user requests a new image, their moderationId is added to the image document to prevent a race condition.
 
-* Python or JavaScript app (any framework)
-* Quick and easy to get running locally on Linux or OSX
-* Any docs required for operating
-
-## Tips
-
-* Write readable, quality code.
-* Styling is not important.
-* Include tests if you want to.
-* Include commit history if you want to.
