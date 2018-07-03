@@ -59,14 +59,15 @@
         height: 100%;
 
       }
+    }
+    .approved {
+      padding: 0.6rem;
+      background-color: #00ff00;
+    }
 
-      .approved {
-        background-color: #00ff00;
-      }
-
-      .rejected {
-        background-color: #00ff00;
-      }
+    .rejected {
+      padding: 0.6rem;
+      background-color: #ff0000;
     }
   }
 }

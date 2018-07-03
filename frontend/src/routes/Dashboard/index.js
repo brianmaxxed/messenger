@@ -17,26 +17,30 @@ export default class Dashboard extends Component {
     window.scrollTo(0, 0);
     document.title = 'Dashboard';
 
-    axios.get(`http://localhost:3100/api/v1/image/list`)
-      .then(res => {
-        const images = [];
-        res.data.data.message.forEach((obj, idx) => {
-          images.push(<div key={idx} className="box"><img className="thumb" alt="thumb" src={obj.url} /></div>);
-        });
-
-        this.setState({ images });
-      });
+    this.getImageList();
   }
 
   changeFilter(event) {
     let filter = `/${event.target.value}`;
     if (filter === '/all') filter = '';
+    this.getImageList(filter);
+  }
 
+  getImageList(filter = '') {
     axios.get(`http://localhost:3100/api/v1/image/list${filter}`)
       .then(res => {
         const images = [];
         res.data.data.message.forEach((obj, idx) => {
-          images.push(<div key={idx} className="box"><img className="thumb" alt="thumb" src={obj.url} /></div>);
+          let className = 'box';
+          if (typeof obj.approved === 'boolean') {
+            console.log(typeof obj.approved);
+            className += obj.approved ? ' approved' : ' rejected';
+            console.log(className);
+          }
+
+          images.push(<div key={idx} className={className}>
+            <img className="thumb" alt="thumb" src={obj.url} />
+          </div>);
         });
 
         this.setState({ images });

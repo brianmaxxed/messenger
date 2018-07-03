@@ -56,10 +56,11 @@
   width: 80%;
   text-align: left;
   font-weight: bold;
-  padding: 0.3rem; }
+  padding: 1rem 0.3rem 0.3rem 0.3rem; }
 
 .Moderator .recentModerations .recentImages {
   width: 80%;
+  height: 270px;
   background-color: #ff0000;
   display: flex;
   flex-wrap: nowrap;

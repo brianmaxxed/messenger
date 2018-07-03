@@ -64,11 +64,46 @@ export default class Image {
   */
 
   async nextUnmoderated(req = {}) {
+    console.log('!!!');
+    const { user } = req.query;
+
+    if (!user) {
+      return sc.USER_DOESNT_EXIST;
+    }
+
+    // make sure the user exists
+    const u = await User.Model.find({ user }).lean();
+    if (u.length < 1) {
+      return sc.USER_DOESNT_EXIST;
+    }
+
     try {
       const data = await Image.Model.find({
-        approved: { $exists: false },
-        moderatorId: { $exists: false },
-      }).sort({ ts: 1 }).limit(1);
+        $and: [
+          { approved: { $exists: false } },
+          {
+            $or: [
+              { moderatorId: { $exists: false } },
+              { moderatorId: u[0].userId },
+            ],
+          },
+        ],
+      }).sort({ moderatorId: -1, ts: 1 }).limit(2).lean();
+
+      console.log(data);
+      let updated;
+
+      if (!u[0].moderatorId) {
+        updated = await Image.Model.updateOne(
+          { _id: data[0]._id },
+          {
+            $set: {
+              moderatorId: u[0].userId,
+            },
+          },
+        );
+        console.log(updated);
+      }
 
       return { status: sc.SUCCESS.status, data: { message: data } };
     } catch (e) {
@@ -138,7 +173,7 @@ export default class Image {
         return sc.USER_DOESNT_EXIST;
       }
 
-      const data = await Image.Model.find({ moderatorId: u[0].userId })
+      const data = await Image.Model.find({ moderatorId: u[0].userId, approved: { $exists: true } })
         .sort({ updatedAt: -1 }).limit(5).skip(0)
         .lean();
 

@@ -43,6 +43,7 @@ export default class Moderator extends Component {
   refreshData() {
     var urlParams = new URLSearchParams(window.location.search);
 
+    // display the list of moderated images
     axios.get(`http://localhost:3100/api/v1/image/moderated${window.location.search}`)
       .then(res => {
         const images = [];
@@ -62,7 +63,8 @@ export default class Moderator extends Component {
         this.setState({ images, user: urlParams.get('user') });
       });
 
-      axios.get(`http://localhost:3100/api/v1/image/next`)
+      // get the next image to moderate
+      axios.get(`http://localhost:3100/api/v1/image/next${window.location.search}`)
         .then(res => {
           const img = res.data.data.message;
           if (img.length > 0) {
