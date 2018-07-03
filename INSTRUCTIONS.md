@@ -20,14 +20,21 @@ The following are the instructions for running and using the messenger frontend 
 
 ### Install backend-end
  goto backend folder
+ ```
  cd backend
+ ```
  
  make sure you're using node v6.10 or greater; install via nvm if neccessary
+ ```
  nvm install 6.10
+ ```
+```
  npm install
- npm install
+ ```
  or use yarn
+ ```
  yarn
+ ```
  
  edit the .env environment variables if needed. 
  default port is 3100; change as needed.
@@ -39,12 +46,17 @@ console: listening at http://localhost:3100
 
 ### Install front-end
  go to frontend folder
+ ```
  cd frontend
+ ```
  
+ ```
  npm install
+ ```
  or
+ ```
  yarn
- 
+ ```
  runs on port 3000; uses create-react-app the standard right now for creating the boostrap.
  yarn start
 
@@ -67,23 +79,30 @@ http://localhost:3100/api/v1/image/clear
 
 There are two pages:
 # Dashboard
+```
 http://localhost:3000/dashboard
+```
+
 This page shows all the current images and allows a filter to change all, pending, rejected, approved.
-I didn't have time to spice up the dashboard in the time alloted, but I did add a red or green color
-to denote rejected or approved. More features could be added easily to accomodate a better dashboard.
+I didn't have time to spice up the dashboard in the time allotted, but I did add a red or green color to image
+to denote rejected or approved.
 
 Also, the page does not refresh automatically. This was not in the specs I believe, but a refresh timer could easily be added to display an updated screen as the images are moderated. That would be a nice to have.
 
 # Moderation
+```
 http://localhost:3000/moderator?user=user1
 http://localhost:3000/moderator?user=user2
+```
 
 You can have mulliple windows open at the same time and see that users can only moderate their next image
 and there is no overlap between.
+
 Make sure you add the ?user=user1 or ?user=user2 as these are the only 2 users
 (the edge cases of no users has not been added/asked to this example)
 
-On the moderation page each user will see a unique next image to moderate.
+### Moderation workflow
+each user will see a unique next image to moderate.
 Approve or reject the image. The last 5 user's moderations in order from left to right are displayed.
 Users can change their mind on the last 5 entries and reverse their moderation.
 
