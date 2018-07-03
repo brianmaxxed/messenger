@@ -55,7 +55,7 @@ You can now view frontend in the browser.
   Local:            http://localhost:3000/
   On Your Network:  http://192.168.1.208:3000/
 
-- navigate to the urls above.
+navigate to the urls above.
 
 ### Pages
 
