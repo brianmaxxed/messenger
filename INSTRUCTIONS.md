@@ -19,34 +19,34 @@ The following are the instructions for running and using the messenger frontend 
 6. a MongoDB database (localhost or something like mongodb atlas(https://www.mongodb.com/cloud/atlas)
 
 ### Install backend-end
- # goto backend folder
+ - goto backend folder
  cd backend
  
- # make sure you're using node v6.10 or greater; install via nvm if neccessary
+ - make sure you're using node v6.10 or greater; install via nvm if neccessary
  nvm install 6.10
- # npm install
+ - npm install
  npm install
- # or use yarn
+ - or use yarn
  yarn
  
- # edit the .env environment variables if needed. 
- # default port is 3100; change as needed.
- # allows you to change to your MONGO_DEV_URI other settings leave as is; experimental
- # run the app on port 3100 by default.
+ - edit the .env environment variables if needed. 
+ - default port is 3100; change as needed.
+ - allows you to change to your MONGO_DEV_URI other settings leave as is; experimental
+ - run the app on port 3100 by default.
  yarn start
 
 console: listening at http://localhost:3100
 
 ### Install front-end
- # go to frontend folder
+ - go to frontend folder
  cd frontend
  
- # npm install
+ - npm install
  npm install
- # or use yarn
+ - or use yarn
  yarn
  
- # runs on port 3000; uses create-react-app the standard right now for creating the boostrap.
+ - runs on port 3000; uses create-react-app the standard right now for creating the boostrap.
  yarn start
 
 Compiled successfully!
@@ -56,7 +56,7 @@ You can now view frontend in the browser.
   Local:            http://localhost:3000/
   On Your Network:  http://192.168.1.208:3000/
 
-# navigate to the urls above.
+- navigate to the urls above.
 
 ### Pages
 
