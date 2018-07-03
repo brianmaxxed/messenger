@@ -462,6 +462,7 @@ The timestamp field is denoted as 'ts'.
 I created a mongodb database for this example.
 Find the URL in the .env file!
 
+## NOTES
 If there are no users in the user document, then this will not work.
 The data files are in the root of the project: image.json and user.json.
 If creating your own mongodb database import these two files before running.
