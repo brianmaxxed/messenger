@@ -123,9 +123,9 @@ user querystring param is required.
 you must put the following paramters:
 ```
     const params = {
-      imageId: event.target.id ? event.target.id : this.state.newImage._id,
-      user: this.state.user,
-      approved,
+      imageId: "5b39f808092498601a985f80"
+      user: "user1",
+      approved: true,
     };
 ```
 
@@ -171,7 +171,25 @@ We want to start with a prototype that has just two pages. The real system will 
 
 ### Test Dataset
 
-I created a mongodb database for this example. there are two documents: user and image.
+there are two collections: user and image.
+
+user collection:
+```
+{ 
+    "_id" : ObjectId("5b3a1cc867e9e6b98f154ca2"), 
+    "userId" : 1.0, 
+    "user" : "user1"
+}
+{ 
+    "_id" : ObjectId("5b3a1ccd67e9e6b98f154ca3"), 
+    "userId" : 2.0, 
+    "user" : "user2"
+}
+```
+
+I created a mongodb database for this example.
+Find the URL in the .env file!
+
 If there are no users in the user document, then this will not work.
 The data files are in the root of the project: image.json and user.json.
 If creating your own mongodb database import these two files before running.
