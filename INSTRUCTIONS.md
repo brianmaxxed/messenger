@@ -1,4 +1,4 @@
-# Challenge
+# Instructions for Use
 
 Build a thumbs-up/thumbs-down image moderation service.
 
